@@ -9,4 +9,12 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
 
+  def speakers
+  end
+
+  def headphones
+  end
+
+  def earphones
+  end
 end

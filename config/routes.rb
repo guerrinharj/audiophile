@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :products, only: [:index, :show]
   root to: 'products#index'
+  get "/speakers", to: "products#speakers", as: :speakers
+  get "/headphones", to: "products#headphones", as: :headphones
+  get "/earphones", to: "products#earphones", as: :earphones
 end
