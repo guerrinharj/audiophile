@@ -2,6 +2,6 @@
 
 <ul>
 <% @headphones.each do |headphone|%>
- <li> <%= headphone.name %> </li>
+ <li> <%= link_to headphone.name, product_path(headphone) %> </li>
 <% end %>
 </ul>

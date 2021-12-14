@@ -2,6 +2,6 @@
 
 <ul>
 <% @earphones.each do |earphone|%>
- <li> <%= earphone.name %> </li>
+ <li> <%= link_to earphone.name, product_path(earphone) %> </li>
 <% end %>
 </ul>
