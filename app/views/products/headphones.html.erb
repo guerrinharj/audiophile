@@ -1,1 +1,7 @@
 <h1>this is the headphones page</h1>
+
+<ul>
+<% @headphones.each do |headphone|%>
+ <li> <%= headphone.name %> </li>
+<% end %>
+</ul>
