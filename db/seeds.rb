@@ -25,14 +25,11 @@ json_file.each do |element|
   product.image = element["image"]
   product.save!
 
-
   element["includes"].each do |inc|
     piece = Piece.new
     piece.name = inc["item"]
     piece.quantity = inc["quantity"]
     piece.product_id = product.id
     piece.save!
-
-    puts piece
   end
 end
