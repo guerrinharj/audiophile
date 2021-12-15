@@ -4,4 +4,12 @@ class PagesController < ApplicationController
   def home
   end
 
+  def checkout
+
+    @cart = current_user.carts.first
+    @carpros = Carpro.where(cart: @cart)
+    @order = Order.new
+    @order
+  end
+
 end

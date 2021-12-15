@@ -1,8 +1,4 @@
 <h1> Your cart </h1>
-<ul>
-<% @carpros.each do |carpro| %>
-<li><%= carpro.product.name %> <%= link_to "Remove",
-            carpro_path(carpro),
-            method: :delete  %> </li>
-<% end %>
-</ul>
+<%= render "cart" %>
+
+<%= link_to "Checkout",  checkout_path %>
