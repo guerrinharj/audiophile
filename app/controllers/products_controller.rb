@@ -7,6 +7,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    @pieces = Piece.where(product: @product)
   end
 
   def create_carpro(cart, product, user)

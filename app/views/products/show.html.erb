@@ -3,3 +3,10 @@
 <%= simple_form_for(@product) do |f| %>
   <%= f.submit "Add to cart!", class: "btn-success text-light p-2 shadow-none" %>
 <% end %>
+
+this product contains:
+<ul>
+<% @pieces.each do |piece| %>
+<li> <%= piece.name %>  </li>
+<% end %>
+</ul>
