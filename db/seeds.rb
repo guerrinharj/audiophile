@@ -9,6 +9,7 @@
 require 'json'
 require 'open-uri'
 
+Cart.destroy_all
 Product.destroy_all
 Piece.destroy_all
 

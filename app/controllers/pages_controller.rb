@@ -4,8 +4,4 @@ class PagesController < ApplicationController
   def home
   end
 
-  def cart
-    @user = current_user
-    raise
-  end
 end
