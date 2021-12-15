@@ -2,6 +2,8 @@
 
 <%= render "carts/cart" %>
 
-<%= simple_form_for(@order) do |f| %>
+<%= simple_form_for([@cart, @order]) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
   <%= f.submit "Confirm", class: "btn-success text-light p-2 shadow-none" %>
 <% end %>

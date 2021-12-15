@@ -1,0 +1,9 @@
+<h1> this is the order page </h1>
+
+<%= @order %>
+you just bought
+<ul>
+<% @cart.carpros.each do |carpro|%>
+  <li> <%= carpro.product.name %> </li>
+<% end %>
+</ul>
