@@ -32,6 +32,10 @@ class ProductsController < ApplicationController
    redirect_to cart_path(@user)
   end
 
+  def destroy
+    raise
+  end
+
   def speakers
     @speakers = Product.where(category: "speakers")
   end

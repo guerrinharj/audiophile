@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :carts
   resources :products
+  resources :carpros
   root to: 'products#index'
   get "/speakers", to: "products#speakers", as: :speakers
   get "/headphones", to: "products#headphones", as: :headphones
