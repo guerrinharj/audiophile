@@ -27,9 +27,8 @@ class ProductsController < ApplicationController
       @cart = Cart.new
       @cart.user = @user
       @cart.save
+      create_carpro(@cart, @product, @user)
     end
-
-   create_carpro(@cart, @product, @user)
    redirect_to cart_path(@user)
   end
 
