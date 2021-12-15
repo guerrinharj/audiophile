@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get "/speakers", to: "products#speakers", as: :speakers
   get "/headphones", to: "products#headphones", as: :headphones
   get "/earphones", to: "products#earphones", as: :earphones
+  get "/cart", to: "pages#cart", as: :cart
 end
