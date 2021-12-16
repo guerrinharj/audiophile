@@ -6,10 +6,7 @@ class CartsController < ApplicationController
     @cart = @user.carts.first
     @carpros = Carpro.where(cart: @cart)
 
-    sum = carpros_sum(@carpros)
-
-    raise
-
+    @sum = carpros_sum(@carpros)
   end
 
   def create
