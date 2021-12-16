@@ -7,6 +7,6 @@
           <div> <%= link_to "Earphones", earphones_path %></div>
           <div> <%= link_to "Speakers", speakers_path %></div>
         </div>
-      <div id="menu-cart-item"> <%= link_to "Cart", current_user ? cart_path(current_user) : new_user_session_path  %> </div>
+      <div id="menu-cart-item"> <%= link_to image_tag('icon-cart.png'), current_user ? cart_path(current_user) : new_user_session_path  %> </div>
     </div>
 </section>
