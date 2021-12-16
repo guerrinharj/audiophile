@@ -1,10 +1,26 @@
-<div>
-Footer
+<section id="footer">
+  <div id="footer-bio">
+    <div id="mobile-menu-logo-item"> <%= image_tag('logo.png') %></div>
+    <p>Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers
+    and sound specialists who are devoted to helping you get the most out of personal audio. Come and
+    visit our demo facility - we're open 7 days a week.</p>
+  </div>
+  <div id="footer-menu">
+    <ul>
+      <li> <%= link_to "Home", root_path %></li>
+      <li> <%= link_to "Headphones", headphones_path %></li>
+      <li> <%= link_to "Earphones", earphones_path %></li>
+      <li> <%= link_to "Speakers", speakers_path %></li>
+    </ul>
+  </div>
+  <div id="footer-copyright">
+  Copyright 2021. All rights reserved.
+  </div>
+  <div id="footer-social">
   <ul>
-    <li> <%= link_to "Home", root_path %></li>
-    <li> <%= link_to "Headphones", headphones_path %></li>
-    <li> <%= link_to "Earphones", earphones_path %></li>
-    <li> <%= link_to "Speakers", speakers_path %></li>
-    <li> <%= link_to "Cart", current_user ? cart_path(current_user) : new_user_session_path  %>
+    <li> <i class="fab fa-instagram"></i> </li>
+    <li> <i class="fab fa-facebook"></i> </li>
+    <li> <i class="fab fa-twitter"></i> </li>
   </ul>
-</div>
+  </div>
+</section>
