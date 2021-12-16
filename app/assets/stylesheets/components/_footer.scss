@@ -1,15 +1,17 @@
 #footer {
   background-color: black;
   color: white;
+  padding: 60px 0
+}
+
+#footer .container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin: auto;
-  padding: 50px;
 }
 
-#footer div {
+#footer .container div {
   width: 50%;
   display: flex;
   align-items: center;
@@ -47,7 +49,11 @@
 
 @media (max-width: 600px) {
 
-#footer, #footer div,  #footer-menu ul {
+#footer {
+  padding: 20px;
+}
+
+#footer .container, #footer .container div,  #footer-menu ul {
   display: block;
   width: 100%;
   text-align: center;
