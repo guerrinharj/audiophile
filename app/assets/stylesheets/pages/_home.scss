@@ -1,7 +1,47 @@
 #hero {
-  background-image: url('https://res.cloudinary.com/db7q8jblt/image/upload/v1639681600/audiophile/image-header_pmn2qp.jpg');
-  background-size: contain;
-  background-position: right;
-  padding: 200px;
+  padding: 100px;
+  width: 100%;
+  height: 90vh;
+  background-image: url("https://res.cloudinary.com/db7q8jblt/image/upload/v1639684181/audiophile/home/desktop/image-hero_gnoqaf.jpg");
+  color: white;
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+}
+
+.hero-product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-product-info, .hero-product-image {
+  width: 50%;
+}
+
+.hero-product-info h3 {
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  font-size: 15px;
+  width: auto;
+  margin: 20px 0;
+}
+
+.hero-product-info p {
+  opacity: 0.6;
+  font-weight: 300;
+  width: 75%;
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.hero-product-info h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin: 20px 0;
+}
+
+#button-area {
+  margin: 60px 0;
 }
