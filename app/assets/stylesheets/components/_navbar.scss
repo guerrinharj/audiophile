@@ -5,6 +5,7 @@
 }
 
 #navbar {
+  font-family: $headers-font;
   background-color: black;
   padding: 30px 20px;
   color: white;
@@ -30,9 +31,10 @@
   margin: 0 150px;
 }
 
-#navbar a:hover {
+#menu-pages-item a:hover {
   color: white;
-  border-bottom: solid 1.5px orange;
+  border-bottom: solid 1px orangered;
+  transition: 0.5s ease;
 }
 
 @media (max-width: 600px) {

@@ -2,7 +2,7 @@
 @import "home";
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: $body-font;
   -webkit-font-smoothing: antialiased;
 }
 

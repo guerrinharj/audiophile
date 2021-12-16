@@ -1,7 +1,9 @@
 #footer {
   background-color: black;
   color: white;
-  padding: 60px 0
+  padding: 60px 0;
+  font-family: $headers-font;
+  position: relative;
 }
 
 #footer .container {
@@ -9,6 +11,16 @@
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
+}
+
+#orange-line {
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background-color: orangered;
+    top: 0;
+    left: 50%;
+    z-index: 3;
 }
 
 #footer .container div {
@@ -28,7 +40,8 @@
 }
 
 #footer p {
-  margin: 20px 0
+  margin: 20px 0;
+  opacity: 0.7;
 }
 
 #footer-social ul, #footer-menu ul {
@@ -42,8 +55,14 @@
   font-weight: 800
 }
 
+#footer-menu a:hover {
+  color: white;
+  border-bottom: solid 1px orangered;
+  transition: 0.5s ease;
+}
+
 #footer li {
-  margin-right: 10px;
+  margin: 0 20px;
 }
 
 
