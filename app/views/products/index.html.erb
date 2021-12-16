@@ -1,7 +1,9 @@
-<h1>this is the home</h1>
+<section id="hero">
 
-<ul>
-<% @products.each do |product|%>
-  <li> <%= link_to product.name, product_path(product) %> </li>
-<% end %>
-</ul>
+  <ul>
+  <% @products.each do |product|%>
+    <li> <%= link_to product.name, product_path(product) %> </li>
+  <% end %>
+  </ul>
+
+</section>

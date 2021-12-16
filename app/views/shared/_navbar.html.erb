@@ -1,9 +1,12 @@
-<div>
-  <ul>
-    <li> <%= link_to "Home", root_path %></li>
-    <li> <%= link_to "Headphones", headphones_path %></li>
-    <li> <%= link_to "Earphones", earphones_path %></li>
-    <li> <%= link_to "Speakers", speakers_path %></li>
-    <li> <%= link_to "Cart", current_user ? cart_path(current_user) : new_user_session_path  %>
-  </ul>
-</div>
+<section id="navbar">
+    <div class="container">
+      <div id="menu-logo-item"> <%= image_tag('logo.png') %></div>
+        <div id="menu-pages-item">
+          <div> <%= link_to "Home", root_path %></div>
+          <div> <%= link_to "Headphones", headphones_path %></div>
+          <div> <%= link_to "Earphones", earphones_path %></div>
+          <div> <%= link_to "Speakers", speakers_path %></div>
+        </div>
+      <div id="menu-cart-item"> <%= link_to "Cart", current_user ? cart_path(current_user) : new_user_session_path  %> </div>
+    </div>
+</section>

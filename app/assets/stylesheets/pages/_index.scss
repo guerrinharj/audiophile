@@ -1,2 +1,10 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.container {
+  max-width: 1000px;
+}
+
+ul, li {
+  list-style-type: none;
+}
