@@ -52,11 +52,16 @@
 
 
   #hero {
-    padding: 20px;
+    padding: 0;
     background-position-x: center;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  #hero .container {
+    max-width: 100vw;
+    padding: 0;
   }
 
   .hero-product {
