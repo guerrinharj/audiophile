@@ -1,5 +1,4 @@
 #hero {
-  padding: 100px;
   width: 100%;
   height: 90vh;
   background-image: url("https://res.cloudinary.com/db7q8jblt/image/upload/v1639684181/audiophile/home/desktop/image-hero_gnoqaf.jpg");
@@ -7,9 +6,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: center;
+  display: block;
 }
 
 .hero-product {
+  padding: 100px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,4 +45,32 @@
 
 #button-area {
   margin: 60px 0;
+}
+
+
+@media(max-width: 600px) {
+
+
+  #hero {
+    padding: 20px;
+    background-position-x: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-product {
+    display: block;
+    text-align: center;
+  }
+
+  .hero-product-image, .hero-product-info {
+    margin: auto;
+    width: 100%;
+  }
+
+  .hero-product-info p {
+    margin: auto;
+  }
+
 }

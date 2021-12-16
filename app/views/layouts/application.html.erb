@@ -12,7 +12,8 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
+    <%= render 'shared/navbar' unless params[:action] == "index"%>
+
     <%= render 'shared/flashes' %>
 
     <%= yield %>

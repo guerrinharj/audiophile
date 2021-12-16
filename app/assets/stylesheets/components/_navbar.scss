@@ -1,12 +1,21 @@
+.bg-black {
+  background-color: black;
+}
+
+.bg-none {
+  background-color: transparent;
+  width: 100%;
+  border-bottom: solid 1px #ccc
+}
+
 #mobilenav {
   display: none;
-  background-color: black;
+  background-color: inherit;
   z-index: 2;
 }
 
 #navbar {
   font-family: $headers-font;
-  background-color: black;
   padding: 30px 20px;
   color: white;
   text-transform: uppercase;
