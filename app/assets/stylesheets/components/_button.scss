@@ -1,0 +1,14 @@
+.btn-audiophile {
+  padding: 20px;
+  text-transform: uppercase;
+  background-color: orangered;
+  border: solid 1px white;
+  transition: 0.1s ease;
+}
+
+.btn-audiophile:hover {
+  background-color: white;
+  border: solid 1px orangered;
+  color: orangered;
+  transition: 0.1s ease;
+}

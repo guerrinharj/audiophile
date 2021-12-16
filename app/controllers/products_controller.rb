@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    @product = Product.where(category: "headphones").first
   end
 
   def show

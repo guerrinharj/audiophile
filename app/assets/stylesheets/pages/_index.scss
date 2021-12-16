@@ -4,6 +4,8 @@
 body {
   font-family: $body-font;
   -webkit-font-smoothing: antialiased;
+  background-color: black;
+  color: white;
 }
 
 a {
@@ -21,6 +23,8 @@ a:hover {
 
 ul, li {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 

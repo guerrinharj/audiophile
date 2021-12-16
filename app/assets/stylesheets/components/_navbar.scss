@@ -1,12 +1,21 @@
+.bg-black {
+  background-color: black;
+}
+
+.bg-none {
+  background-color: transparent;
+  width: 100%;
+  border-bottom: solid 1px #ccc
+}
+
 #mobilenav {
   display: none;
-  background-color: black;
+  background-color: inherit;
   z-index: 2;
 }
 
 #navbar {
   font-family: $headers-font;
-  background-color: black;
   padding: 30px 20px;
   color: white;
   text-transform: uppercase;
@@ -29,12 +38,13 @@
   align-items: center;
   flex-grow: 1;
   margin: 0 150px;
+  opacity: 0.7
 }
 
 #menu-pages-item a:hover {
   color: white;
   border-bottom: solid 1px orangered;
-  transition: 0.5s ease;
+  transition: 0.2s ease;
 }
 
 @media (max-width: 600px) {
@@ -60,7 +70,7 @@
   }
 
   #mobilenav {
-    transform: translateY(-100%);
+    transform: translateY(-300%);
     transition: 0.3s ease;
     position: fixed;
     width: 100vw;

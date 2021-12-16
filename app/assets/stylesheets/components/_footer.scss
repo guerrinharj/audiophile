@@ -42,6 +42,8 @@
 #footer p {
   margin: 20px 0;
   opacity: 0.7;
+  font-size: 12px;
+  width: 70%;
 }
 
 #footer-social ul, #footer-menu ul {
@@ -52,7 +54,8 @@
 
 #footer-menu {
   text-transform: uppercase;
-  font-weight: 800
+  font-weight: 800;
+  opacity: 0.7
 }
 
 #footer-menu a:hover {
@@ -79,8 +82,16 @@
   margin: 30px auto;
 }
 
+#footer p {
+  margin: auto;
+}
+
 #footer #footer-social ul {
   justify-content: center;
+}
+
+#orange-line {
+  left: 46%;
 }
 
 }
