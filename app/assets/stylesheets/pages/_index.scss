@@ -22,3 +22,12 @@ a:hover {
 ul, li {
   list-style-type: none;
 }
+
+
+@media (max-width: 600px) {
+
+  .container {
+    max-width: 400px;
+  }
+
+}

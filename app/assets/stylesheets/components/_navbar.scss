@@ -12,6 +12,10 @@
   align-items: center;
 }
 
+#menu-mobile {
+  display: none;
+}
+
 #navbar #menu-pages-item {
   display: flex;
   justify-content: space-between;
@@ -23,4 +27,24 @@
 #navbar a:hover {
   color: white;
   border-bottom: solid 1.5px orange;
+}
+
+@media (max-width: 600px) {
+
+  #navbar #menu-pages-item {
+    display:  none
+  }
+
+  #menu-mobile {
+    display: block;
+    cursor: pointer;
+  }
+
+  #menu-mobile div {
+    width: 35px;
+    height: 2px;
+    background-color: white;
+    margin: 6px 0;
+  }
+
 }
