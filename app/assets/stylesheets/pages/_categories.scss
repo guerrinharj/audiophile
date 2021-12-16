@@ -1,0 +1,17 @@
+#categories {
+  background-color: white;
+  padding: 50px;
+}
+
+.categories-outer {
+  justify-content: center;
+}
+
+.categories-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.category-box {
+  background-color: gainsboro;
+}
