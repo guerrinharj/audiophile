@@ -4,6 +4,6 @@
     <li> <%= link_to "Headphones", headphones_path %></li>
     <li> <%= link_to "Earphones", earphones_path %></li>
     <li> <%= link_to "Speakers", speakers_path %></li>
-    <li> <%= link_to "Cart", cart_path(current_user) %>
+    <li> <%= link_to "Cart", current_user ? cart_path(current_user) : new_user_session_path  %>
   </ul>
 </div>
