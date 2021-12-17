@@ -15,10 +15,13 @@ Product.destroy_all
 Piece.destroy_all
 
 headphones = Category.new(name: "headphones")
+headphones.image_url << "https://res.cloudinary.com/db7q8jblt/image/upload/v1639684179/audiophile/category-headphones/desktop/image-xx99-mark-two_ajzyis.jpg" << "https://res.cloudinary.com/db7q8jblt/image/upload/v1639684179/audiophile/category-headphones/desktop/image-xx99-mark-one_hcua7d.jpg" << "https://res.cloudinary.com/db7q8jblt/image/upload/v1639684179/audiophile/category-headphones/desktop/image-xx59_zfe192.jpg"
 headphones.save!
 speakers = Category.new(name: "speakers")
+speakers.image_url << "https://res.cloudinary.com/db7q8jblt/image/upload/v1639684180/audiophile/category-speakers/desktop/image-zx9_k7vgrh.jpg" << "https://res.cloudinary.com/db7q8jblt/image/upload/v1639684180/audiophile/category-speakers/desktop/image-zx7_jr5cl5.jpg"
 speakers.save!
 earphones = Category.new(name: "earphones")
+earphones_section.image_url << "https://res.cloudinary.com/db7q8jblt/image/upload/v1639684179/audiophile/category-earphones/desktop/image-yx1-earphones_pnfpos.jpg" << "https://res.cloudinary.com/db7q8jblt/image/upload/v1639684179/audiophile/category-earphones/mobile/image-yx1-earphones_at9v6s.jpg"
 earphones.save!
 
 puts "Categories seeded!"
