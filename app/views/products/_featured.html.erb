@@ -1,0 +1,34 @@
+<section>
+  <div class="container">
+
+    <div class="feature-box orange">
+      <div class="image-side">
+        <%= cl_image_tag('audiophile/home/desktop/image-speaker-zx9_wsgljg')%>
+        <%= cl_image_tag('audiophile/home/desktop/pattern-circles_c5knqk')%>
+      </div>
+      <div class-="info-side">
+        <h3> <%= zx9.name %> </h3>
+        <p> <%= zx9.description %> </p>
+        <%= link_to "See Product", product_path(zx9), class: "btn-audiophile" %>
+      </div>
+    </div>
+
+    <div class="feature-box unique" style="background-image: url('https://res.cloudinary.com/db7q8jblt/image/upload/v1639684181/audiophile/home/desktop/image-speaker-zx7_q3cwff.jpg') ">
+      <div class-="info-side">
+        <h3> <%= zx7.name %> </h3>
+        <%= link_to "See Product", product_path(zx7), class: "btn-audiophile" %>
+      </div>
+    </div>
+
+    <div class="feature-box split">
+      <div class="image-side">
+        <%= cl_image_tag('audiophile/home/desktop/image-earphones-yx1_hwuwpi')%>
+      </div>
+      <div class-="info-side">
+        <h3> <%= yx1.name %> </h3>
+        <%= link_to "See Product", product_path(yx1), class: "btn-audiophile" %>
+      </div>
+    </div>
+
+  </div>
+</section>

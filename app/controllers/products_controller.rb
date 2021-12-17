@@ -6,6 +6,10 @@ class ProductsController < ApplicationController
     @categories = Category.all
     @category = @categories.first
     @product = Product.find_by(category: @category.id)
+
+    @zx7 = Product.find_by(name: "ZX7 Speaker")
+    @zx9 = Product.find_by(name: "ZX9 Speaker")
+    @yx1 = Product.find_by(name: "YX1 Wireless Earphones")
   end
 
   def show
