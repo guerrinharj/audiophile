@@ -3,8 +3,9 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
-    @product = Product.where(category: 1).first
     @categories = Category.all
+    @category = @categories.first
+    @product = Product.find_by(category: @category.id)
   end
 
   def show

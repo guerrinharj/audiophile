@@ -21,7 +21,7 @@ speakers = Category.new(name: "speakers")
 speakers.image_url << "https://res.cloudinary.com/db7q8jblt/image/upload/v1639684180/audiophile/category-speakers/desktop/image-zx9_k7vgrh.jpg" << "https://res.cloudinary.com/db7q8jblt/image/upload/v1639684180/audiophile/category-speakers/desktop/image-zx7_jr5cl5.jpg"
 speakers.save!
 earphones = Category.new(name: "earphones")
-earphones_section.image_url << "https://res.cloudinary.com/db7q8jblt/image/upload/v1639684179/audiophile/category-earphones/desktop/image-yx1-earphones_pnfpos.jpg" << "https://res.cloudinary.com/db7q8jblt/image/upload/v1639684179/audiophile/category-earphones/mobile/image-yx1-earphones_at9v6s.jpg"
+earphones.image_url << "https://res.cloudinary.com/db7q8jblt/image/upload/v1639684179/audiophile/category-earphones/desktop/image-yx1-earphones_pnfpos.jpg" << "https://res.cloudinary.com/db7q8jblt/image/upload/v1639684179/audiophile/category-earphones/mobile/image-yx1-earphones_at9v6s.jpg"
 earphones.save!
 
 puts "Categories seeded!"
@@ -38,6 +38,7 @@ json_file.each do |element|
   product.description = element["description"]
   product.features = element["features"]
   product.image = element["image"]
+  product.galery_array = [element["gallery"]["first"]["desktop"], element["gallery"]["second"]["desktop"], element["gallery"]["third"]["desktop"]]
 
   categories.each do |category|
     product.category_id = category.id if element["category"] == category.name
