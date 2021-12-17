@@ -38,16 +38,4 @@ class ProductsController < ApplicationController
   def destroy
     raise
   end
-
-  def speakers
-    @speakers = Product.where(category: "speakers")
-  end
-
-  def headphones
-    @headphones = Product.where(category: "headphones")
-  end
-
-  def earphones
-    @earphones = Product.where(category: "earphones")
-  end
 end

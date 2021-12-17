@@ -3,9 +3,9 @@
   <div class="container">
     <div id="mobile-menu-pages-item">
       <div> <%= link_to "Home", root_path %></div>
-      <div> <%= link_to "Headphones", headphones_path %></div>
-      <div> <%= link_to "Earphones", earphones_path %></div>
-      <div> <%= link_to "Speakers", speakers_path %></div>
+      <div> <%= link_to "Headphones", category_path(1) %></div>
+      <div> <%= link_to "Earphones", category_path(3) %></div>
+      <div> <%= link_to "Speakers", category_path(2) %></div>
     </div>
   </div>
    <div id="mobile-menu-logo-item"> <%= image_tag('logo.png') %></div>
@@ -21,9 +21,9 @@
       <div id="menu-logo-item"> <%= image_tag('logo.png') %></div>
         <div id="menu-pages-item">
           <div> <%= link_to "Home", root_path %></div>
-          <div> <%= link_to "Headphones", headphones_path %></div>
-          <div> <%= link_to "Earphones", earphones_path %></div>
-          <div> <%= link_to "Speakers", speakers_path %></div>
+          <div> <%= link_to "Headphones", category_path(1) %></div>
+          <div> <%= link_to "Earphones", category_path(3) %></div>
+          <div> <%= link_to "Speakers", category_path(2) %></div>
         </div>
       <div id="menu-cart-item"> <%= link_to image_tag('icon-cart.png'), current_user ? cart_path(current_user) : new_user_session_path  %> </div>
     </div>

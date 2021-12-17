@@ -2,12 +2,17 @@
 
   <div class="container categories-outer">
 
-    <div class="category-inner">
+    <div class="categories-inner">
 
       <% categories.each do |category| %>
       <div class="category-box">
-        <p><%= category.name %></p>
-        <p>Shop <%=cl_image_tag('audiophile/shared/desktop/icon-arrow-right_mzunen')%> </p>
+        <div class="category-image" style="background-image: url('<%= category.image_url[0] %>')"> </div>
+        <div class="category-info">
+          <p><%= category.name %></p>
+          <%= link_to  category_path(category) do %>
+          <p> Shop <%=cl_image_tag('audiophile/shared/desktop/icon-arrow-right_mzunen')%> </p>
+          <% end %>
+        </div>
       </div>
       <% end %>
 
