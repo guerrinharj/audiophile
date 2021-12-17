@@ -1,15 +1,15 @@
-<section>
-  <div class="container">
+<section id="featured">
+  <div class="container featured-inner">
 
     <div class="feature-box orange">
       <div class="image-side">
-        <%= cl_image_tag('audiophile/home/desktop/image-speaker-zx9_wsgljg')%>
-        <%= cl_image_tag('audiophile/home/desktop/pattern-circles_c5knqk')%>
+       <span class="circles"> <%= cl_image_tag('audiophile/home/desktop/pattern-circles_c5knqk') %> </span>
+       <span class="speakers-image"><%= cl_image_tag('audiophile/home/desktop/image-speaker-zx9_wsgljg')%></span>
       </div>
       <div class-="info-side">
         <h3> <%= zx9.name %> </h3>
         <p> <%= zx9.description %> </p>
-        <%= link_to "See Product", product_path(zx9), class: "btn-audiophile" %>
+        <p><%= link_to "See Product", product_path(zx9), class: "btn-audiophile" %></p>
       </div>
     </div>
 
@@ -20,11 +20,11 @@
       </div>
     </div>
 
-    <div class="feature-box split">
-      <div class="image-side">
-        <%= cl_image_tag('audiophile/home/desktop/image-earphones-yx1_hwuwpi')%>
+    <div class="split">
+      <div class="image-side feature-box" style="background-image: url('https://res.cloudinary.com/db7q8jblt/image/upload/v1639684181/audiophile/home/desktop/image-earphones-yx1_hwuwpi.jpg')">
+
       </div>
-      <div class-="info-side">
+      <div class="info-side feature-box">
         <h3> <%= yx1.name %> </h3>
         <%= link_to "See Product", product_path(yx1), class: "btn-audiophile" %>
       </div>
