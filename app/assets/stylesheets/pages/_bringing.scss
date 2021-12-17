@@ -1,0 +1,63 @@
+#bringing {
+  color: black;
+  padding: 100px;
+}
+
+.bringing-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bringing-info, .bringing-image {
+  width: 50%;
+  margin: 20px 15px;
+}
+
+.bringing-image {
+  background-image: url('https://res.cloudinary.com/db7q8jblt/image/upload/v1639684190/audiophile/shared/desktop/image-best-gear_pjclcn.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 250px 100px;
+}
+
+.bringing-info h2 {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+
+.bringing-info span {
+  color: orangered
+}
+
+.bringing-info p {
+  margin: 50px 0;
+  opacity: 0.7;
+  width: 85%
+}
+
+
+@media (max-width: 600px) {
+
+  #bringing {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .bringing-box {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    transform: translateX(-20px);
+  }
+
+  .bringing-info, .bringing-image {
+    width: 100%;
+  }
+
+  .bringing-info p {
+    margin: 50px auto;
+  }
+
+
+}
