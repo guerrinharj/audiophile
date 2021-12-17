@@ -4,7 +4,6 @@ class CreateProducts < ActiveRecord::Migration[6.0]
       t.string :slug
       t.string :name
       t.string :image
-      t.string :category
       t.boolean :new, default: false
       t.integer :price
       t.text :description

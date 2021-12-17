@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_16_010959) do
+ActiveRecord::Schema.define(version: 2021_12_17_150918) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,12 @@ ActiveRecord::Schema.define(version: 2021_12_16_010959) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_carts_on_user_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "orders", force: :cascade do |t|
@@ -62,7 +68,6 @@ ActiveRecord::Schema.define(version: 2021_12_16_010959) do
     t.string "slug"
     t.string "name"
     t.string "image"
-    t.string "category"
     t.boolean "new", default: false
     t.integer "price"
     t.text "description"
@@ -70,6 +75,8 @@ ActiveRecord::Schema.define(version: 2021_12_16_010959) do
     t.string "galery_array", default: [], array: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_products_on_category_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -90,4 +97,5 @@ ActiveRecord::Schema.define(version: 2021_12_16_010959) do
   add_foreign_key "orders", "carts"
   add_foreign_key "orders", "users"
   add_foreign_key "pieces", "products"
+  add_foreign_key "products", "categories"
 end
