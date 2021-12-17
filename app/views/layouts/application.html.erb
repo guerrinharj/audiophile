@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' unless params[:action] == "index"%>
+    <%= render 'shared/navbar', categories: @categories unless params[:action] == "index"%>
 
     <%= render 'shared/flashes' %>
 

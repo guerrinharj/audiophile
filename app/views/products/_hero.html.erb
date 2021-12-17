@@ -2,7 +2,7 @@
   <div class="container">
 
   <div class="<%= params[:action] == "index" ? "bg-none" : "bg-black" %>">
-    <%= render 'shared/navbar' %>
+    <%= render 'shared/navbar', categories: categories %>
   </div>
 
     <div class="hero-product">

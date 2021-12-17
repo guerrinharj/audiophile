@@ -13,6 +13,7 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @categories = Category.all
     @product = Product.find(params[:id])
     @pieces = Piece.where(product: @product)
   end
