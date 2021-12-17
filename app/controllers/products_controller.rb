@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
     @product = Product.where(category: 1).first
+    @categories = Category.all
   end
 
   def show
