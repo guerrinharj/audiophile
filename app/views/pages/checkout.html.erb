@@ -5,12 +5,12 @@
 <%= simple_form_for([@cart, @order]) do |f| %>
   <%= f.input :name %>
   <%= f.input :email %>
-  <%= f.number_field :phone_number %>
+  <%= f.input :phone_number %>
   <%= f.input :address %>
-  <%= f.number_field :zipcode %>
+  <%= f.input :zipcode %>
   <%= f.input :city %>
   <%= f.input :country %>
-  <%= f.number_field :emoney_number %>
-  <%= f.number_field :emoney_pin %>
+  <%= f.input :emoney_number %>
+  <%= f.input :emoney_pin %>
   <%= f.submit "Confirm", class: "btn-success text-light p-2 shadow-none" %>
 <% end %>

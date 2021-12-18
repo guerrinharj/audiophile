@@ -1,5 +1,12 @@
 class CarprosController < ApplicationController
 
+  def create_cart
+    @cart = Cart.new
+    @cart.user = current_user
+    @cart.save
+    @cart
+  end
+
   def create_carpro(product, cart)
     @carpro = Carpro.new(carpro_params)
     @carpro.product = product
@@ -10,15 +17,20 @@ class CarprosController < ApplicationController
 
   def create
     @product = Product.find(params[:product_id])
+    @carts = current_user.carts
 
-    if current_user.carts
-      create_carpro(@product, current_user.carts.last)
-    else
-      @cart = Cart.new
-      @cart.user = current_user
-      @cart.save
+    if @carts.empty?
+      @cart = create_cart
       create_carpro(@product, @cart)
     end
+
+    if @carts.last.orders.empty? || @carts.last.orders.last.confirmed == false
+      create_carpro(@product, current_user.carts.last)
+    else
+      @cart = create_cart
+      create_carpro(@product, @cart)
+    end
+
   end
 
   def destroy

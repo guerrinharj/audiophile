@@ -1,8 +1,11 @@
 class OrdersController < ApplicationController
   def show
+    @categories = Category.all
     @user = current_user
     @order = Order.find(params[:id])
     @cart = Cart.find(@order.cart_id)
+    @order.confirmed = true
+    @order.save
   end
 
   def create
