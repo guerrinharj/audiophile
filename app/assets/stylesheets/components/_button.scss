@@ -1,17 +1,22 @@
 .btn-audiophile, .btn-alt:hover {
-  padding: 20px;
-  text-transform: uppercase;
-  background-color: orangered;
-  border: solid 1px white;
-  transition: 0.1s ease;
-  color: white;
+  padding: 20px!important;
+  text-transform: uppercase!important;
+  background-color: orangered!important;
+  border: solid 1px white!important;
+  transition: 0.1s ease!important;
+  color: white!important;
 }
 
 .btn-audiophile:hover, .btn-alt {
-  padding: 20px;
-  text-transform: uppercase;
-  background-color: white;
-  border: solid 1px orangered;
-  color: orangered;
-  transition: 0.1s ease;
+  padding: 20px!important;
+  text-transform: uppercase!important;
+  background-color: white!important;
+  border: solid 1px orangered!important;
+  color: orangered!important;
+  transition: 0.1s ease!important;
+}
+
+.btn-small {
+  font-size: 10px;
+  padding: 12px!important;
 }

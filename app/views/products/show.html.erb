@@ -2,55 +2,72 @@
 
   <div class="container product-inner">
 
-    <div class="row-1 row">
-      <div class="product-image" style="background-image: url('<%= cl_image_path(@product.image["desktop"])%>') ">
+    <%= link_to 'Go Back', products_path %>
+
+    <div class="row-1 product-row">
+      <div class="product-image product-row-box" style="background-image: url('https://res.cloudinary.com/db7q8jblt/image/upload/v1639684182/audiophile<%= @image %>');">
       </div>
-      <div>
-        <h3><%= @product.new? ? "New Product" : "" %></h3>
+      <div class="product-info product-row-box">
+        <h3><%= @product.new? ? "New Product" : "Arrival" %></h3>
         <h1><%= @product.name %></h1>
-        <p><%= @product.description %></p>
-        <p>$<%= @product.price %></p>
-      </div>
-        <div>
+        <p class="product-description"><%= @product.description %></p>
+        <p class="product-price">$<%= @product.price %></p>
+        <div class="product-form">
           <%= simple_form_for([@product, @carpro]) do |f| %>
-          <%= f.number_field :quantity %>
-          <%= f.submit "Add To Cart", class: "btn-audiophile" %>
+          <div class="row">
+            <%= f.label "Quantity"%>
+          </div>
+           <div class="row">
+            <%= f.number_field :quantity, min: "0", label: "Quantity", class: "btn-alt" %>
+            <%= f.submit "Add To Cart", class: "btn-audiophile" %>
+          </div>
            <% end %>
+        </div>
         </div>
       </div>
 
 
-      <div class="row-2 row">
-        <div class="product-features">
+      <div class="row-2 product-row">
+        <div class="product-features product-row-box">
           <h2> Features </h2>
           <p> <%= @product.features %> </p>
         </div>
-        <div class="product-pieces">
-          <h2> In The Box </h2>
-          <ul>
-            <% @pieces.each do |piece| %>
-            <li> <%= piece.name %>  </li>
-            <% end %>
+        <div class="product-pieces product-row-box">
+          <div>
+            <h2> In The Box </h2>
+            <ul>
+              <% @pieces.each do |piece| %>
+              <li> <span class="piece-quantity"> <%= piece.quantity %>x </span><%= piece.name %>  </li>
+              <% end %>
           </ul>
+            </div>
         </div>
       </div>
 
-      <div class="row-3 row">
+      <div class="row-3 product-row">
         <div class="gallery">
           <% @product.galery_array.each do |image|%>
-            <div style="background-image: url('<%= image %>')"> </div>
+            <div class="product-row-grid" style="background-image: url('https://res.cloudinary.com/db7q8jblt/image/upload/v1639684182/audiophile<%= image %>"> </div>
           <% end %>
         </div>
       </div>
 
-      <div class="row-4 row">
-        <% @products.each do |product|%>
-          <div style="background-image: url('<%= cl_image_path(product.image) %>q')"></div>
-        <% end %>
+      <div class="row-4 product-row">
+        <div class="card-outer">
+          <div class="card-inner">
+            <% @products.each do |product|%>
+            <%= render 'cardproduct', product: product %>
+          <% end %>
+          </div>
+        </div>
       </div>
 
-      <div class="row-5 row">
+      <div class="row-5">
         <%= render 'categories', categories: @categories %>
+      </div>
+
+      <div class="row-6">
+        <%= render 'bringing'%>
       </div>
 
   </div>
