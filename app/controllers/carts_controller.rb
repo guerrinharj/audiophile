@@ -2,10 +2,11 @@ class CartsController < ApplicationController
   include ApplicationHelper
 
   def show
+    @categories = Category.all
     @user = current_user
-      @cart = @user.carts.first
-      @carpros = Carpro.where(cart: @cart)
-      @sum = carpros_sum(@carpros)
+    @cart = @user.carts.last
+    @carpros = @cart.carpros
+    @sum = carpros_sum(@carpros)
   end
 
   def create

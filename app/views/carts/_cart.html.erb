@@ -1,6 +1,6 @@
 <ul>
 <% @carpros.each do |carpro| %>
-<li><%= carpro.product.name %> $<%= carpro.product.price %> <%= link_to "Remove",
+<li><%= carpro.quantity %>x <%= carpro.product.name %>: $<%= carpro.quantity * carpro.product.price %> <%= link_to "Remove",
             carpro_path(carpro),
             method: :delete  %> </li>
 <% end %>

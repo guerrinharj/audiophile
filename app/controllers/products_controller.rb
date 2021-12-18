@@ -13,35 +13,10 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @products = Product.all.order('RANDOM()').limit(3)
     @categories = Category.all
     @product = Product.find(params[:id])
     @pieces = Piece.where(product: @product)
-  end
-
-  def create_carpro(cart, product, user)
     @carpro = Carpro.new
-    @carpro.product = product
-    @carpro.cart = cart.first
-    @carpro.save
-  end
-
-  def update
-    @product = Product.find(params[:id])
-    @user = current_user
-
-    if @user.carts
-      @cart = @user.carts
-      create_carpro(@cart, @product, @user)
-    else
-      @cart = Cart.new
-      @cart.user = @user
-      @cart.save
-      create_carpro(@cart, @product, @user)
-    end
-   redirect_to cart_path(@user)
-  end
-
-  def destroy
-    raise
   end
 end

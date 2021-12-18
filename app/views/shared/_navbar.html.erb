@@ -3,9 +3,9 @@
   <div class="container">
     <div id="mobile-menu-pages-item">
       <div> <%= link_to "Home", root_path %></div>
-      <div> <%= link_to "Headphones", category_path(1) %></div>
-      <div> <%= link_to "Earphones", category_path(3) %></div>
-      <div> <%= link_to "Speakers", category_path(2) %></div>
+      <% @categories.each do |category|  %>
+      <div><%= link_to category.name, category_path(category)%></div>
+      <% end %>
     </div>
   </div>
    <div id="mobile-menu-logo-item"> <%= image_tag('logo.png') %></div>

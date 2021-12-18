@@ -12,11 +12,11 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar', categories: @categories unless params[:action] == "index"%>
+    <%= render 'shared/navbar', categories: @categories unless params[:action] == "index" || params[:controller] == "devise/sessions" || params[:controller] == "devise/registrations"%>
 
     <%= render 'shared/flashes' %>
 
     <%= yield %>
-    <%= render 'shared/footer' %>
+    <%= render 'shared/footer' unless  params[:controller] == "devise/sessions" || params[:controller] == "devise/registrations" %>
   </body>
 </html>

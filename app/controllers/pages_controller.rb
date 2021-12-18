@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   end
 
   def checkout
-    @cart = current_user.carts.first
+    @cart = current_user.carts.last
     @carpros = Carpro.where(cart: @cart)
     @order = Order.new
   end

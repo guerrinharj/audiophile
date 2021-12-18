@@ -1,12 +1,57 @@
-<h1>this is the <%= @product.name %> page</h1>
+<section class="product">
 
-<%= simple_form_for(@product) do |f| %>
-  <%= f.submit "Add to cart!", class: "btn-success text-light p-2 shadow-none" %>
-<% end %>
+  <div class="container product-inner">
 
-this product contains:
-<ul>
-<% @pieces.each do |piece| %>
-<li> <%= piece.name %>  </li>
-<% end %>
-</ul>
+    <div class="row-1 row">
+      <div class="product-image" style="background-image: url('<%= cl_image_path(@product.image["desktop"])%>') ">
+      </div>
+      <div>
+        <h3><%= @product.new? ? "New Product" : "" %></h3>
+        <h1><%= @product.name %></h1>
+        <p><%= @product.description %></p>
+        <p>$<%= @product.price %></p>
+      </div>
+        <div>
+          <%= simple_form_for([@product, @carpro]) do |f| %>
+          <%= f.number_field :quantity %>
+          <%= f.submit "Add To Cart", class: "btn-audiophile" %>
+           <% end %>
+        </div>
+      </div>
+
+
+      <div class="row-2 row">
+        <div class="product-features">
+          <h2> Features </h2>
+          <p> <%= @product.features %> </p>
+        </div>
+        <div class="product-pieces">
+          <h2> In The Box </h2>
+          <ul>
+            <% @pieces.each do |piece| %>
+            <li> <%= piece.name %>  </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row-3 row">
+        <div class="gallery">
+          <% @product.galery_array.each do |image|%>
+            <div style="background-image: url('<%= image %>')"> </div>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="row-4 row">
+        <% @products.each do |product|%>
+          <div style="background-image: url('<%= cl_image_path(product.image) %>q')"></div>
+        <% end %>
+      </div>
+
+      <div class="row-5 row">
+        <%= render 'categories', categories: @categories %>
+      </div>
+
+  </div>
+</section>

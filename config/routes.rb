@@ -4,8 +4,11 @@ Rails.application.routes.draw do
   resources :carts do
       resources :orders
   end
-  resources :products
-  resources :carpros
+  resources :products do
+    resources :carpros, only: [:create]
+  end
+  resources :carpros, only: [:destroy]
+
   root to: 'products#index'
   resources :categories
 end
