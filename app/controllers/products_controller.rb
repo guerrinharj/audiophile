@@ -18,5 +18,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @pieces = Piece.where(product: @product)
     @carpro = Carpro.new
+
+    @image = @product.image
   end
 end

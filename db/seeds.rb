@@ -9,6 +9,7 @@
 require 'json'
 require 'open-uri'
 
+User.destroy_all
 Category.destroy_all
 Cart.destroy_all
 Product.destroy_all
@@ -37,7 +38,7 @@ json_file.each do |element|
   product.price = element["price"]
   product.description = element["description"]
   product.features = element["features"]
-  product.image = element["image"]
+  product.image = element["image"]["desktop"]
   product.galery_array = [element["gallery"]["first"]["desktop"], element["gallery"]["second"]["desktop"], element["gallery"]["third"]["desktop"]]
 
   categories.each do |category|
