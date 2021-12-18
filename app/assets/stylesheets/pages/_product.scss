@@ -103,3 +103,37 @@
   justify-content: space-between;
   align-items: center;
 }
+
+
+@media (max-width: 600px) {
+
+  .product-row {
+   display: block;
+   text-align: center;
+  }
+
+  .product-row-box {
+    width: 100%!important;
+  }
+
+  .row-1 .product-image {
+    padding: 100px;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .product-form {
+    transform: translateX(0px);
+}
+
+  .product-form .row {
+    display: block;
+  }
+
+  input#carpro_quantity {
+    margin: 10px 0 40px;
+  }
+
+
+
+}
