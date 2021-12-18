@@ -1,0 +1,36 @@
+.card-outer {
+  justify-content: center;
+  width: 100%;
+}
+
+.card-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-box {
+  background-color: white;
+  position: relative;
+  padding: 50px;
+  text-align: center;
+  color: black;
+  text-transform: uppercase;
+  font-family: $headers-font;
+  font-weight: 800;
+  padding: 30px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.card-box div {
+  margin: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 100px;
+}
+
+.card-box h2 {
+  margin: 20px 0;
+  font-size: 14px;
+}

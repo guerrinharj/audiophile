@@ -53,13 +53,21 @@
       </div>
 
       <div class="row-4 product-row">
-        <% @products.each do |product|%>
-          <div class="product-row-grid" style="background-image: url('<%= cl_image_path(product.image) %>q')"></div>
-        <% end %>
+        <div class="card-outer">
+          <div class="card-inner">
+            <% @products.each do |product|%>
+            <%= render 'cardproduct', product: product %>
+          <% end %>
+          </div>
+        </div>
       </div>
 
       <div class="row-5">
         <%= render 'categories', categories: @categories %>
+      </div>
+
+      <div class="row-6">
+        <%= render 'bringing'%>
       </div>
 
   </div>
