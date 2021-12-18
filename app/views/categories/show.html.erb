@@ -1,7 +1,23 @@
-<h1>this is the product categories page</h1>
+<section class="category">
+  <div class="category-outer container">
+        <h1><%= @category.name %></h1>
 
-<ul>
-<% @products.each do |product|%>
- <li> <%= link_to product.name, product_path(product) %> </li>
-<% end %>
-</ul>
+      <div class="category-inner">
+        <div class="card-outer">
+          <div class="card-inner">
+            <% @products.each do |product|%>
+            <%= render 'products/cardproduct', product: product %>
+          <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <%= render 'products/categories', categories: @categories %>
+      </div>
+
+      <div>
+        <%= render 'products/bringing'%>
+      </div>
+  </div>
+</section>
