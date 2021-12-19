@@ -1,9 +1,27 @@
-<ul>
-<% @carpros.each do |carpro| %>
-<li><%= carpro.quantity %>x <%= carpro.product.name %>: $<%= carpro.quantity * carpro.product.price %> <%= link_to "Remove",
-            carpro_path(carpro),
-            method: :delete  %> </li>
-<% end %>
-</ul>
+<div class="cart-box">
+  <span> Summary </span>
+  <ul>
+  <% @carpros.each do |carpro| %>
+  <li class="cart-item">
+    <div class="cart-image" style="background-image: url('https://res.cloudinary.com/db7q8jblt/image/upload/v1639684182/audiophile<%= carpro.product.image %>')">
+    </div>
+    <div>
+      <p class="cart-product-name"><%= carpro.product.name %></p>
+      <p class="cart-product-price">$<%= carpro.product.price %> <span class="cart-quantity"> x<%= carpro.quantity %></span></p>
+    </div>
+    <div>
+      <%= link_to "X",
+      carpro_path(carpro),
+      method: :delete  %>
+    </div>
+    </li>
+    <% end %>
+  </ul>
 
-Total value: $<%= @sum %>
+  <ul class="cart-totals">
+    <li> Total: <span>$<%= @sum %></span> </li>
+    <li> Shipping: <span>$50</span> </li>
+    <li> VAT: <span>$<%= (@sum + 50) / 5 %></span> </li>
+    <li class="grand-total"> Grand Total: <span>  <span>$<%= @sum + ((@sum + 50) / 5) %> </span> </li>
+  </ul>
+</div>

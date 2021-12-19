@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home ]
+  include ApplicationHelper
 
   def home
   end
@@ -9,5 +10,6 @@ class PagesController < ApplicationController
     @cart = current_user.carts.last
     @carpros = Carpro.where(cart: @cart)
     @order = Order.new
+    @sum = carpros_sum(@carpros)
   end
 end

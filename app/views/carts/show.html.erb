@@ -1,4 +1,14 @@
-<h1> Your cart </h1>
-<%= render "cart" %>
+<section id="cart">
 
-<%=link_to "Checkout", cart_checkout_path(@cart), class: "btn-audiophile"%>
+  <div class="cart-inner container">
+
+  <h1> Your cart </h1>
+  <%= render "cart" %>
+
+  <div class="proceed-checkout">
+    <%=link_to "checkout", cart_checkout_path(@cart), class: "btn-audiophile"%>
+  </div>
+
+  </div>
+
+</section>
