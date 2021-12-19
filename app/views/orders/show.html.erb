@@ -1,9 +1,13 @@
-<h1> this is the order page </h1>
-
-<%= @order %>
-you just bought
-<ul>
-<% @cart.carpros.each do |carpro|%>
-  <li> <%= carpro.product.name %> </li>
-<% end %>
-</ul>
+<section id="order">
+  <div class="container order-inner">
+    <div class="order-box">
+     <h5> Thank You </h5>
+    <ul>
+      <p> You just bought:</p>
+      <% @cart.carpros.each do |carpro|%>
+      <li> <div class="order-image" style="background-image: url('https://res.cloudinary.com/db7q8jblt/image/upload/v1639684182/audiophile<%= carpro.product.image %>')"> </div> <%= carpro.product.name %> </li>
+      <% end %>
+    </ul>
+    </div>
+  </div>
+</section>
