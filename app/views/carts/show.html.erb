@@ -1,13 +1,17 @@
 <section id="cart">
 
   <div class="cart-inner container">
-
+  <% if @cart.carpros.empty? %>
+  <h1> Your cart is empty... </h1>
+  <% else %>
   <h1> Your cart </h1>
   <%= render "cart" %>
 
   <div class="proceed-checkout">
     <%=link_to "checkout", cart_checkout_path(@cart), class: "btn-audiophile"%>
   </div>
+
+  <% end %>
 
   </div>
 

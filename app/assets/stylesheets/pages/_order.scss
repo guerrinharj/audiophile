@@ -1,0 +1,38 @@
+#order {
+  background-color: white;
+  color: black;
+}
+
+#order h5 {
+  color: orangered
+}
+
+.order-inner {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.order-box {
+  padding: 20px;
+  border: solid 1px #ccc;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.order-box li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-family: $headers-font;
+}
+
+.order-image {
+  background-position: center;
+  width: 200px;
+  height: 200px;
+  background-size: 200px;
+  margin-right: 20px;
+}
