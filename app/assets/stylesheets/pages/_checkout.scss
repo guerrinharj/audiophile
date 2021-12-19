@@ -1,0 +1,15 @@
+#checkout-cart {
+  background-color: white;
+  color: black;
+}
+
+.checkout-cart-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 50px 0;
+}
+
+.checkout-module, .cart-module {
+  background-color: white;
+}

@@ -1,16 +1,34 @@
-<h1> this is the checkout! </h1>
+<section id="checkout-cart">
 
-<%= render "carts/cart" %>
+  <div class="container">
 
-<%= simple_form_for([@cart, @order]) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :email %>
-  <%= f.input :phone_number %>
-  <%= f.input :address %>
-  <%= f.input :zipcode %>
-  <%= f.input :city %>
-  <%= f.input :country %>
-  <%= f.input :emoney_number %>
-  <%= f.input :emoney_pin %>
-  <%= f.submit "Confirm", class: "btn-success text-light p-2 shadow-none" %>
-<% end %>
+   <%= link_to 'Go Back', products_path %>
+
+  <div class="checkout-cart-inner">
+
+    <div class="checkout-module">
+
+      <h1> Checkout </h1>
+
+      <%= simple_form_for([@cart, @order]) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :email %>
+        <%= f.input :phone_number %>
+        <%= f.input :address %>
+        <%= f.input :zipcode %>
+        <%= f.input :city %>
+        <%= f.input :country %>
+        <%= f.input :emoney_number %>
+        <%= f.input :emoney_pin %>
+        <%= f.submit "Confirm", class: "btn-success text-light p-2 shadow-none" %>
+      <% end %>
+    </div>
+
+    <div class="cart-module">
+      <%= render "carts/cart", sum: @sum %>
+    </div>
+
+  </div>
+  </div>
+
+</section>

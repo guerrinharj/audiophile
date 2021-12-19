@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :carts do
     resources :orders
-    get '[:id]/checkout', to: 'pages#checkout', as: :checkout
+    get '/checkout', to: 'pages#checkout', as: :checkout
   end
   resources :products do
     resources :carpros, only: [:create]
