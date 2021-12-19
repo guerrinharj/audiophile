@@ -2,7 +2,9 @@
 
   <div class="container">
 
-   <%= link_to 'Go Back', products_path %>
+  <div class="go-back">
+   <%= link_to 'Go Back', products_path%>
+  </div>
 
   <div class="checkout-cart-inner">
 
@@ -11,16 +13,27 @@
       <h1> Checkout </h1>
 
       <%= simple_form_for([@cart, @order]) do |f| %>
-        <%= f.input :name %>
-        <%= f.input :email %>
+        <h4> Billing Details </h4>
+        <div class="row">
+          <%= f.input :name %>
+          <%= f.input :email %>
+        </div>
         <%= f.input :phone_number %>
+
+        <h4> Shipping Info </h4>
         <%= f.input :address %>
-        <%= f.input :zipcode %>
-        <%= f.input :city %>
+        <div class="row">
+          <%= f.input :zipcode %>
+          <%= f.input :city %>
+        </div>
         <%= f.input :country %>
-        <%= f.input :emoney_number %>
-        <%= f.input :emoney_pin %>
-        <%= f.submit "Confirm", class: "btn-success text-light p-2 shadow-none" %>
+
+        <h4> Payment Details </h4>
+        <div class="row">
+          <%= f.input :emoney_number %>
+          <%= f.input :emoney_pin %>
+        </div>
+        <%= f.submit "Confirm", class: "btn-audiophile" %>
       <% end %>
     </div>
 
