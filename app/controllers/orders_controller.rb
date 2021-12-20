@@ -3,9 +3,13 @@ class OrdersController < ApplicationController
     @categories = Category.all
     @user = current_user
     @order = Order.find(params[:id])
-    @cart = Cart.find(@order.cart_id)
+    @last_cart = Cart.find(@order.cart_id)
     @order.confirmed = true
-    @order.save
+    if @order.save
+      @cart = Cart.new
+      @cart.user = @user
+      @cart.save
+    end
   end
 
   def create
