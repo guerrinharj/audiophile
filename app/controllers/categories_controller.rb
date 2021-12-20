@@ -6,5 +6,4 @@ class CategoriesController < ApplicationController
     @products = Product.where(category: @category)
     @categories = Category.all
   end
-
 end

@@ -4,9 +4,15 @@ class CartsController < ApplicationController
   def show
     @categories = Category.all
     @user = current_user
-    @cart = @user.carts.last
-    @carpros = @cart.carpros
-    @sum = carpros_sum(@carpros)
+
+    if @user.carts.empty?
+      @cart = Cart.new
+      @cart.save
+    else
+      @cart = @user.carts.last
+      @carpros = @cart.carpros
+      @sum = carpros_sum(@carpros)
+    end
   end
 
   def create

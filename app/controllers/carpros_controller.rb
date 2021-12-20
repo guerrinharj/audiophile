@@ -30,7 +30,6 @@ class CarprosController < ApplicationController
       @cart = create_cart
       create_carpro(@product, @cart)
     end
-
   end
 
   def destroy
@@ -42,5 +41,4 @@ class CarprosController < ApplicationController
   def carpro_params
     params.require(:carpro).permit(:quantity, :product_id)
   end
-
 end
