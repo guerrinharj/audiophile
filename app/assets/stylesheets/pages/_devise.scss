@@ -1,0 +1,30 @@
+.devise-page {
+  background-color: white;
+}
+
+.devise-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 100px 0;
+}
+
+.devise-inner {
+  width: 30%;
+  background-color: white;
+  border: solid 1px black;
+  text-align: center;
+  color: black;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.logo-devise {
+  justify-content: center;
+  display: flex;
+}
+
+.devise-inner .form-actions, .devise-inner h2 {
+    padding: 20px;
+}

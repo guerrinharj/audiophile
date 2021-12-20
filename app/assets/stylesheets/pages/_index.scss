@@ -8,6 +8,7 @@
 @import "cart";
 @import "checkout";
 @import "order";
+@import "devise";
 
 body {
   font-family: $body-font;
@@ -21,8 +22,8 @@ a {
 }
 
 a:hover {
-  color: white;
   text-decoration: none;
+  color: inherit
 }
 
 .container {
